@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>GreenEarth | Environment Conservation</title>
+    <meta name="description" content="One-page website promoting environment conservation: water, forests, clean energy, and community action." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="media/logo.jpeg" type="image/jpeg" />
+</head>
+<body>
+    <header class="site-header" id="top">
+        <div class="container nav-container">
+            <a href="#top" class="logo">
+                <img src="media/logo.jpeg" alt="GreenEarth logo" width="48" height="48" loading="eager" />
+                <span>GreenEarth</span>
+            </a>
+        
+            <nav class="site-nav" aria-label="Primary">
+                <button class="nav-toggle" aria-controls="nav-list" aria-expanded="false" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul id="nav-list">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#initiatives">Initiatives</a></li>
+                    <li><a href="#strategies">Strategies</a></li>
+                    <li><a href="#impact">Impact</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#testimonials">Feedback</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section id="hero" class="section hero">
+            <div class="hero-media">
+                <picture>
+                    <source srcset="media/main.jpeg" media="(min-width: 800px)" />
+                    <img src="media/env2.jpeg" alt="Lush green landscape" class="hero-img" />
+                </picture>
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container hero-inner">
+                <h1 class="reveal-up">Protect. Restore. Thrive.</h1>
+                <p class="lead reveal-up delay-1">Together we conserve water, plant trees, reduce waste, and empower communities.</p>
+                <div class="cta-group reveal-up delay-2">
+                    <a href="#initiatives" class="btn btn-primary">Our Work</a>
+                    <a href="#contact" class="btn btn-outline">Get Involved</a>
+                </div>
+                <div class="stats reveal-up delay-3" aria-label="Impact statistics">
+                    <div class="stat">
+                        <span class="count" data-target="25000">0</span>
+                        <span class="label">Trees Planted</span>
+                    </div>
+                    <div class="stat">
+                        <span class="count" data-target="120">0</span>
+                        <span class="label">Cleanups</span>
+                    </div>
+                    <div class="stat">
+                        <span class="count" data-target="35">0</span>
+                        <span class="label">Communities</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section about container">
+            <div class="about-grid">
+                <div class="about-text reveal-up">
+                    <h2>Why Environment Conservation?</h2>
+                    <p>Healthy ecosystems purify our water, regulate the climate, and support livelihoods. We mobilize local action through education, tree planting, responsible water use, and sustainable practices.</p>
+                    <ul class="checks">
+                        <li>Community-led clean water initiatives</li>
+                        <li>Reforestation and urban greening</li>
+                        <li>Waste reduction and circular economy</li>
+                        <li>Youth empowerment and stewardship</li>
+                    </ul>
+                </div>
+                <div class="about-media reveal-up delay-1">
+                    <div class="stacked-photos">
+                        <img src="media/water.jpeg" alt="Fresh water stream" />
+                        <img src="media/plant2.jpeg" alt="Planting a seedling" />
+                        <img src="media/env4.jpeg" alt="Clean environment" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INITIATIVES -->
+        <section id="initiatives" class="section initiatives">
+            <div class="container">
+                <h2 class="section-title reveal-up">Our Initiatives</h2>
+                <div class="cards">
+                    <article class="card reveal-up">
+                        <img src="media/plant.jpeg" alt="Tree planting" />
+                        <div class="card-body">
+                            <h3>Reforestation</h3>
+                            <p>We cultivate native trees, restore degraded lands, and protect biodiversity corridors.</p>
+                        </div>
+                    </article>
+                    <article class="card reveal-up delay-1">
+                        <img src="media/water2.jpeg" alt="Water conservation" />
+                        <div class="card-body">
+                            <h3>Water Conservation</h3>
+                            <p>Rainwater harvesting, river cleanups, and community training for efficient use.</p>
+                        </div>
+                    </article>
+                    <article class="card reveal-up delay-2">
+                        <img src="media/comm8.jpeg" alt="Community empowerment" />
+                        <div class="card-body">
+                            <h3>Community Empowerment</h3>
+                            <p>Workshops, school programs, and youth-led eco-clubs to drive lasting change.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- STRATEGIES (Alternating panels) -->
+        <section id="strategies" class="section strategies">
+            <div class="container">
+                <div class="split-panel reveal-up">
+                    <div class="split-text">
+                        <p class="eyebrow">Approach</p>
+                        <h2>Amplifying environmental voices globally</h2>
+                        <p>We develop targeted campaigns that raise awareness and drive meaningful policy changes with lasting impact on communities and society.</p>
+                    </div>
+                    <div class="split-media">
+                        <img src="media/comm9.jpeg" alt="Advocacy event" loading="lazy" />
+                    </div>
+                </div>
+
+                <div class="split-panel alt reveal-up delay-1">
+                    <div class="split-text">
+                        <p class="eyebrow">Engagement</p>
+                        <h2>Empowering local environmental leaders</h2>
+                        <p>Training, resources, and ongoing support help grassroots initiatives create meaningful change and foster sustainability within communities.</p>
+                    </div>
+                    <div class="split-media">
+                        <img src="media/comm12.jpeg" alt="Community training" loading="lazy" />
+                    </div>
+                </div>
+
+                <div class="split-panel reveal-up delay-2">
+                    <div class="split-text">
+                        <p class="eyebrow">Influence</p>
+                        <h2>Shaping environmental legislation</h2>
+                        <p>We collaborate with policymakers to craft sustainable, impactful regulations that promote long‑term ecological health and resilience.</p>
+                    </div>
+                    <div class="split-media">
+                        <img src="media/comm13.jpeg" alt="Policy advocacy" loading="lazy" />
+                    </div>
+                </div>
+
+                <div class="split-panel alt reveal-up delay-3">
+                    <div class="split-text">
+                        <p class="eyebrow">Innovation</p>
+                        <h2>Developing innovative environmental strategies</h2>
+                        <p>We balance environmental protection with community needs through practical, data‑driven solutions that scale.</p>
+                    </div>
+                    <div class="split-media">
+                        <img src="media/comm14.jpeg" alt="Innovation in the field" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IMPACT FEATURES -->
+        <section id="impact" class="section impact">
+            <div class="container">
+                <p class="eyebrow center">Community impact</p>
+                <h2 class="section-title reveal-up">How we create positive environmental change</h2>
+                <p class="lead center reveal-up delay-1">Our initiatives directly support local communities and global environmental health.</p>
+                <div class="feature-cards">
+                    <article class="feature-card reveal-up">
+                        <img src="media/env3.jpeg" alt="Ecological restoration forest" loading="lazy" />
+                        <h3>Ecological restoration</h3>
+                        <p>Revitalizing habitats, protecting biodiversity, and restoring degraded areas for resilient ecosystems.</p>
+                    </article>
+                    <article class="feature-card reveal-up delay-1">
+                        <img src="media/comm5.jpeg" alt="Street march" loading="lazy" />
+                        <h3>Economic empowerment</h3>
+                        <p>Creating sustainable livelihoods that improve quality of life and long‑term prosperity.</p>
+                    </article>
+                    <article class="feature-card reveal-up delay-2">
+                        <img src="media/comm7.jpeg" alt="Training" loading="lazy" />
+                        <h3>Climate resilience</h3>
+                        <p>Helping communities adapt to challenges with knowledge, tools, and local leadership.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- GLOBAL INITIATIVES (Tall cards) -->
+        <section id="global" class="section global">
+            <div class="container">
+                <h2 class="section-title reveal-up">Our global environmental initiatives</h2>
+                <div class="tall-cards">
+                    <article class="tall-card reveal-up">
+                        <p class="eyebrow">Emissions</p>
+                        <h3>Reducing carbon footprints across communities and industries</h3>
+                        <p>Targeted strategies to minimize impact while promoting sustainability and balance.</p>
+                        <img src="media/plant.jpeg" alt="Footprint reduction" loading="lazy" />
+                    </article>
+                    <article class="tall-card reveal-up delay-1">
+                        <p class="eyebrow">Ecosystems</p>
+                        <h3>Protecting biodiversity and natural habitats worldwide</h3>
+                        <p>Comprehensive programs that support ecological balance across diverse regions.</p>
+                        <img src="media/env1.jpeg" alt="Forest" loading="lazy" />
+                    </article>
+                    <article class="tall-card reveal-up delay-2">
+                        <p class="eyebrow">Resilience</p>
+                        <h3>Building community capacity to adapt to environmental challenges</h3>
+                        <p>Providing knowledge and resources people need to thrive and make a difference.</p>
+                        <img src="media/empowerement.jpeg" alt="Community capacity" loading="lazy" />
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION -->
+        <section id="cta" class="section cta-wide">
+            <div class="container cta-inner">
+                <div class="cta-text reveal-up">
+                    <p class="eyebrow">Be part of the solution</p>
+                    <h2>Together we can create meaningful environmental change</h2>
+                    <p>Join our movement to build a sustainable future that benefits us and generations to come.</p>
+                    <div class="cta-group">
+                        <a href="#contact" class="btn btn-primary">Donate</a>
+                        <a href="#about" class="btn btn-outline">Learn</a>
+                    </div>
+                </div>
+                <div class="cta-media reveal-up delay-1">
+                    <img src="media/comm8.jpeg" alt="Natural solutions" loading="lazy" />
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section id="gallery" class="section gallery">
+            <div class="container">
+                <h2 class="section-title reveal-up">Impact Gallery</h2>
+                <div class="slider reveal-up delay-1" aria-roledescription="carousel">
+                    <button class="slider-btn prev" aria-label="Previous slide">‹</button>
+                    <div class="slider-track" role="group">
+                        <div class="slide"><img src="media/env1.jpeg" alt="Environment 1" loading="lazy" /></div>
+                        <div class="slide"><img src="media/env2.jpeg" alt="Environment 2" loading="lazy" /></div>
+                        <div class="slide"><img src="media/env4.jpeg" alt="Environment 4" loading="lazy" /></div>
+                        <div class="slide"><img src="media/comm3.jpeg" alt="Community action 3" loading="lazy" /></div>
+                        <div class="slide"><img src="media/comm4.jpeg" alt="Community action 4" loading="lazy" /></div>
+                        <div class="slide"><img src="media/comm5.jpeg" alt="Community action 5" loading="lazy" /></div>
+                        <div class="slide"><img src="media/comm6.jpeg" alt="Community action 6" loading="lazy" /></div>
+                        <div class="slide"><img src="media/comm7.jpeg" alt="Community action 7" loading="lazy" /></div>
+                        <div class="slide"><img src="media/comm9.jpeg" alt="Community action 9" loading="lazy" /></div>
+                        <div class="slide"><img src="media/empowerement.jpeg" alt="Empowerment" loading="lazy" /></div>
+                        <div class="slide"><img src="media/empower%202.jpeg" alt="Empowerment 2" loading="lazy" /></div>
+                        <div class="slide"><img src="media/pic.jpeg" alt="Community" loading="lazy" /></div>
+                        <div class="slide"><img src="media/WhatsApp%20Image%202025-09-14%20at%2009.28.32.jpeg" alt="Recent activity" loading="lazy" /></div>
+                    </div>
+                    <button class="slider-btn next" aria-label="Next slide">›</button>
+                    <div class="slider-dots" role="tablist" aria-label="Gallery slides"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM -->
+        <section id="team" class="section team">
+            <div class="container">
+                <h2 class="section-title reveal-up">Meet the Team</h2>
+                <div class="team-slider" aria-roledescription="carousel" aria-label="Leadership">
+                    <div class="team-row row-top">
+                        <div class="team-track">
+                            <article class="member">
+                                <img src="media/Team/geverse-muthiani.jpeg" alt="Geverse Muthiani" />
+                                <h3>Geverse Muthiani</h3>
+                                <p>Executive Director</p>
+                                <span>A Visionary Leader with 10 years of experience in the global environmental policy.</span>
+                            </article>
+                            <article class="member">
+                                <img src="media/Team/titus-mutonga.jpeg" alt="Titus Mutonga" />
+                                <h3>Titus Mutonga</h3>
+                                <p>Program Director</p>
+                                <span>Expert in Community Development and Sustainable Resource Management.</span>
+                            </article>
+                            <article class="member">
+                                <img src="media/Team/millecent-okoth.jpeg" alt="Millecent Okoth" />
+                                <h3>Millecent Okoth</h3>
+                                <p>Research Lead</p>
+                                <span>Expert in Climate Adaptation and Strategies</span>
+                            </article>
+                            <article class="member">
+                                <img src="media/Team/jackline-orlando.jpeg" alt="Jackline Orlando" />
+                                <h3>Jackline Orlando</h3>
+                                <p>Policy Advisor</p>
+                                <span>International Expert in Environmental legislation and Regulatory Framework.</span>
+                            </article>
+                            <!-- duplicates for seamless scroll -->
+                            <article class="member">
+                                <img src="media/Team/geverse-muthiani.jpeg" alt="Geverse Muthiani" />
+                                <h3>Geverse Muthiani</h3>
+                                <p>Executive Director</p>
+                                <span>A Visionary Leader with 10 years of experience in the global environmental policy.</span>
+                            </article>
+                            <article class="member">
+                                <img src="media/Team/titus-mutonga.jpeg" alt="Titus Mutonga" />
+                                <h3>Titus Mutonga</h3>
+                                <p>Program Director</p>
+                                <span>Expert in Community Development and Sustainable Resource Management.</span>
+                            </article>
+                            <article class="member">
+                                <img src="media/Team/millecent-okoth.jpeg" alt="Millecent Okoth" />
+                                <h3>Millecent Okoth</h3>
+                                <p>Research Lead</p>
+                                <span>Expert in Climate Adaptation and Strategies</span>
+                            </article>
+                            <article class="member">
+                                <img src="media/Team/jackline-orlando.jpeg" alt="Jackline Orlando" />
+                                <h3>Jackline Orlando</h3>
+                                <p>Policy Advisor</p>
+                                <span>International Expert in Environmental legislation and Regulatory Framework.</span>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="team-row row-bottom">
+                        <div class="team-track">
+                            <article class="member">
+                                <img src="media/Team/sharon-wanyamu.jpeg" alt="Sharon Wanyamu" />
+                                <h3>Sharon Wanyamu</h3>
+                                <p>Community Engagement</p>
+                                <span>Passionate Advocate for grassroots environmental initiatives and local empowerment.</span>
+                            </article>
+                            <article class="member">
+                                <img src="media/Team/uadesia-wanja.jpeg" alt="Uadesia Wanja" />
+                                <h3>Uadesia Wanja</h3>
+                                <p>Sustainable Strategist</p>
+                                <span>Innovative Thinker Developing Holistic Approaches to Environmental challenges.</span>
+                            </article>
+                            <article class="member">
+                                <img src="media/Team/bendetta-mumina.jpeg" alt="Benedetta Mumina" />
+                                <h3>Benedetta Mumina</h3>
+                                <p>Communications Director</p>
+                                <span>Strategic Communicator Driving Environmental Awareness and Engagement across global platforms.</span>
+                            </article>
+                            <article class="member">
+                                <img src="media/Team/mary-kawira.jpeg" alt="Mary Kawira" />
+                                <h3>Mary Kawira</h3>
+                                <p>Partnerships Manager</p>
+                                <span>Building Collaborative Networks to maximise environmental impact.</span>
+                            </article>
+                            <!-- duplicates for seamless scroll -->
+                            <article class="member">
+                                <img src="media/Team/sharon-wanyamu.jpeg" alt="Sharon Wanyamu" />
+                                <h3>Sharon Wanyamu</h3>
+                                <p>Community Engagement</p>
+                                <span>Passionate Advocate for grassroots environmental initiatives and local empowerment.</span>
+                            </article>
+                            <article class="member">
+                                <img src="media/Team/uadesia-wanja.jpeg" alt="Uadesia Wanja" />
+                                <h3>Uadesia Wanja</h3>
+                                <p>Sustainable Strategist</p>
+                                <span>Innovative Thinker Developing Holistic Approaches to Environmental challenges.</span>
+                            </article>
+                            <article class="member">
+                                <img src="media/Team/bendetta-mumina.jpeg" alt="Benedetta Mumina" />
+                                <h3>Benedetta Mumina</h3>
+                                <p>Communications Director</p>
+                                <span>Strategic Communicator Driving Environmental Awareness and Engagement across global platforms.</span>
+                            </article>
+                            <article class="member">
+                                <img src="media/Team/mary-kawira.jpeg" alt="Mary Kawira" />
+                                <h3>Mary Kawira</h3>
+                                <p>Partnerships Manager</p>
+                                <span>Building Collaborative Networks to maximise environmental impact.</span>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS / FEEDBACK -->
+        <section id="testimonials" class="section testimonials">
+            <div class="container">
+                <h2 class="section-title reveal-up">Community Feedback</h2>
+                <div class="testimonials-grid">
+                    <article class="testimonial reveal-up">
+                        <img src="media/feedback/arnold-ochieng.jpeg" alt="Arnold Ochieng" />
+                        <blockquote>
+                            "Our Community has completely transformed through their sustainable developement Programs."
+                        </blockquote>
+                        <p class="name">Arnold Ochieng</p>
+                    </article>
+                    <article class="testimonial reveal-up delay-1">
+                        <img src="media/comm.jpeg" alt="Community member" />
+                        <blockquote>
+                            "Their policy advocacy has created meaningful environmental change in our region."
+                        </blockquote>
+                        <p class="name">Community Member</p>
+                    </article>
+                    <article class="testimonial reveal-up delay-2">
+                        <img src="media/comm12.jpeg" alt="Volunteer" />
+                        <blockquote>
+                            "We have seen incredible improvements in local ecosystems through their initiatives."
+                        </blockquote>
+                        <p class="name">Volunteer</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT / CTA -->
+        <section id="contact" class="section contact">
+            <div class="container contact-grid">
+                <div class="contact-text reveal-up">
+                    <h2>Join the Movement</h2>
+                    <p>Partner, volunteer, or donate to accelerate impact. Every action counts.</p>
+                    <ul class="checks">
+                        <li>Monthly cleanups</li>
+                        <li>School eco-clubs</li>
+                        <li>Tree nurseries</li>
+                    </ul>
+                </div>
+                <form class="contact-form reveal-up delay-1" action="#" method="post" novalidate>
+                    <div class="row">
+                        <label>
+                            <span>Name</span>
+                            <input type="text" name="name" placeholder="Enter your name" required />
+                        </label>
+                        <label>
+                            <span>Email</span>
+                            <input type="email" name="email" placeholder="Enter your email" required />
+                        </label>
+                    </div>
+                    <label>
+                        <span>Message</span>
+                        <textarea name="message" rows="4" placeholder="How would you like to help?" required></textarea>
+                    </label>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <p class="form-status" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 32px;">
+            <div style="flex: 1 1 260px; min-width: 220px; max-width: 340px;">
+                <img src="media/logo.jpeg" alt="Logo" style="width: 48px; height: 48px; border-radius: 8px; margin-bottom: 12px;" />
+                <div style="margin-bottom: 10px;">
+                    <strong>E-Mail</strong><br />
+                    <a href="mailto:communityempowermentenvironm@gmail.com" style="color: #fff;">communityempowermentenvironm@gmail.com</a>
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <strong>Contact</strong><br />
+                    <span>+254 714 842 506 / +254 731 611 649</span>
+                </div>
+                <div style="display: flex; gap: 16px; margin-top: 10px;">
+                    <a href="#facebook" aria-label="Facebook" style="color: #fff;">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.595 0 0 .592 0 1.326v21.348C0 23.408.595 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116C23.406 24 24 23.408 24 22.674V1.326C24 .592 23.406 0 22.675 0"/></svg>
+                    </a>
+                    <a href="#instagram" aria-label="Instagram" style="color: #fff;">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.241 1.308 3.608.058 1.266.069 1.646.069 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.241 1.246-3.608 1.308-1.266.058-1.646.069-4.85.069s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.241-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.974-.974 2.241-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.013 7.052.072 5.775.13 4.602.402 3.635 1.37 2.668 2.338 2.396 3.511 2.338 4.788.013 8.332 0 8.741 0 12c0 3.259.013 3.668.072 4.948.058 1.277.33 2.45 1.298 3.418.968.968 2.141 1.24 3.418 1.298C8.332 23.987 8.741 24 12 24s3.668-.013 4.948-.072c1.277-.058 2.45-.33 3.418-1.298.968-.968 1.24-2.141 1.298-3.418.059-1.28.072-1.689.072-4.948s-.013-3.668-.072-4.948c-.058-1.277-.33-2.45-1.298-3.418-.968-.968-2.141-1.24-3.418-1.298C15.668.013 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                    </a>
+                    <a href="#x" aria-label="X" style="color: #fff;">
+                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M22.162 0H1.838C.822 0 0 .822 0 1.838v20.324C0 23.178.822 24 1.838 24h20.324C23.178 24 24 23.178 24 22.162V1.838C24 .822 23.178 0 22.162 0zM7.09 20.452H3.545V9.545H7.09v10.907zm-1.773-12.41c-1.13 0-2.045-.916-2.045-2.045 0-1.13.915-2.045 2.045-2.045 1.13 0 2.045.915 2.045 2.045 0 1.129-.915 2.045-2.045 2.045zm15.135 12.41h-3.545v-5.604c0-1.336-.025-3.057-1.864-3.057-1.864 0-2.15 1.454-2.15 2.956v5.705h-3.545V9.545h3.404v1.489h.049c.474-.899 1.632-1.847 3.36-1.847 3.594 0 4.257 2.364 4.257 5.444v6.821z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div style="flex: 2 1 400px; min-width: 260px; display: flex; flex-wrap: wrap; gap: 32px; justify-content: flex-end;">
+                <div style="min-width: 120px;">
+                    <strong>About us</strong><br />
+                    <a href="#about">About us</a><br />
+                    <a href="#mission">Our mission</a><br />
+                    <a href="#programs">Programs</a><br />
+                    <a href="#impact">Impact</a><br />
+                    <a href="#resources">Resources</a>
+                </div>
+                <div style="min-width: 120px;">
+                    <strong>Climate action</strong><br />
+                    <a href="#climate">Climate action</a><br />
+                    <a href="#community">Community work</a><br />
+                    <a href="#policy">Policy guide</a><br />
+                    <a href="#donate">Donate</a><br />
+                    <a href="#join">Join</a>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="margin-top: 32px; border-top: 1px solid rgba(255,255,255,.08); padding-top: 18px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+            <span>© 2025 Community Environmental Change. All rights reserved.</span>
+            <div style="display: flex; gap: 24px;">
+                <a href="#policy" style="color: #fff;">Privacy policy</a>
+                <a href="tos" style="color: #fff;">Terms of service</a>
+                <a href="#cookie" style="color: #fff;">Cookies settings</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="floating-back-to-top" aria-label="Back to top">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </a>
+    <script src="script.js" defer></script>
+</body>
+</html>
+
