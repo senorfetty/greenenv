@@ -140,15 +140,20 @@ document.getElementById('year').textContent = new Date().getFullYear();
     let autoplayId = null;
     const autoplayMs = 4000;
     // Continuous scroll mode
-    const continuous = false;
+    const continuous = true;
     let positionPx = 0;
     let lastTs = 0;
-    const pxPerMs = 0.12; // unused when continuous=false
+    const pxPerMs = 0.25; // unused when continuous=false; tune for visible motion
     let isHover = false;
     let dir = 1; // 1 forward, -1 backward
 
+    function slideWidth(){
+        const first = track.querySelector('.slide');
+        return first ? first.clientWidth : slider.clientWidth;
+    }
+
     function update(animate = true) {
-        const offset = -index * slider.clientWidth;
+        const offset = -index * slideWidth();
         if (!animate) track.style.transition = 'none';
         track.style.transform = `translateX(${offset}px)`;
         if (!animate) requestAnimationFrame(() => { track.style.transition = ''; });
@@ -178,7 +183,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
     // Resize
     window.addEventListener('resize', () => {
-        if (continuous) positionPx = -index * slider.clientWidth;
+        if (continuous) positionPx = -index * slideWidth();
         update(false);
     });
 
@@ -196,8 +201,8 @@ document.getElementById('year').textContent = new Date().getFullYear();
     // Drag / touch
     let startX = 0, currentX = 0, dragging = false;
     function onDown(x){ dragging = true; startX = x; currentX = x; track.style.transition = 'none'; }
-    function onMove(x){ if(!dragging) return; currentX = x; const dx = currentX - startX; track.style.transform = `translateX(${-index * slider.clientWidth + dx}px)`; }
-    function onUp(){ if(!dragging) return; dragging = false; const dx = currentX - startX; track.style.transition = ''; if (Math.abs(dx) > slider.clientWidth * 0.2) { go(dx < 0 ? 1 : -1); } else { update(true); } restartAutoplay(); }
+    function onMove(x){ if(!dragging) return; currentX = x; const dx = currentX - startX; track.style.transform = `translateX(${-index * slideWidth() + dx}px)`; }
+    function onUp(){ if(!dragging) return; dragging = false; const dx = currentX - startX; track.style.transition = ''; if (Math.abs(dx) > slideWidth() * 0.2) { go(dx < 0 ? 1 : -1); } else { update(true); } restartAutoplay(); }
     track.addEventListener('mousedown', e => onDown(e.clientX));
     window.addEventListener('mousemove', e => onMove(e.clientX));
     window.addEventListener('mouseup', onUp);
@@ -214,12 +219,14 @@ document.getElementById('year').textContent = new Date().getFullYear();
     }, autoplayMs); }
     function stopAutoplay(){ if (autoplayId) clearInterval(autoplayId); autoplayId = null; }
     function restartAutoplay(){ stopAutoplay(); startAutoplay(); }
-    slider.addEventListener('mouseenter', () => { isHover = true; stopAutoplay(); });
-    slider.addEventListener('mouseleave', () => { isHover = false; startAutoplay(); });
+    if (!continuous) {
+        slider.addEventListener('mouseenter', () => { isHover = true; stopAutoplay(); });
+        slider.addEventListener('mouseleave', () => { isHover = false; startAutoplay(); });
+    }
 
     // Init
     update(false);
-    positionPx = -index * slider.clientWidth;
+    positionPx = -index * slideWidth();
     // Continuous animation loop
     function raf(ts){
         if (!lastTs) lastTs = ts;
@@ -227,7 +234,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
         lastTs = ts;
         if (continuous && !isHover && !dragging) {
             positionPx -= pxPerMs * dt;
-            const width = slider.clientWidth;
+            const width = slideWidth();
             // When we pass the end clone, wrap forward seamlessly
             const minPos = -(originalSlides.length + 1) * width;
             if (positionPx <= minPos) positionPx += originalSlides.length * width;
@@ -241,6 +248,6 @@ document.getElementById('year').textContent = new Date().getFullYear();
         requestAnimationFrame(raf);
     }
     if (continuous) requestAnimationFrame(raf);
-    startAutoplay();
+    if (!continuous) startAutoplay();
 })();
 
