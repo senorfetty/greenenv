@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>GreenEarth | Environment Conservation</title>
     <meta name="description" content="One-page website promoting environment conservation: water, forests, clean energy, and community action." />
@@ -46,8 +46,8 @@
         <section id="hero" class="section hero bg-black">
             <div class="hero-media">
                 <picture>
-                    <source srcset="media/main.jpeg" media="(min-width: 800px)" />
-                    <img src="media/env2.jpeg" alt="Lush green landscape" class="hero-img" />
+                    <source srcset="media/home.jpeg" media="(min-width: 800px)" />
+                    <img src="media/home.jpeg" alt="Home background" class="hero-img" />
                 </picture>
                 <div class="hero-overlay"></div>
             </div>
@@ -238,7 +238,7 @@
                     <h2>Together we can create meaningful environmental change</h2>
                     <p>Join our movement to build a sustainable future that benefits us and generations to come.</p>
                     <div class="cta-group">
-                        <a href="#contact" class="btn btn-primary">Donate</a>
+                        <a href="#donate" id="donateBtn" class="btn btn-primary">Donate</a>
                         <a href="#about" class="btn btn-outline">Learn</a>
                     </div>
                 </div>
@@ -255,19 +255,16 @@
                 <div class="slider reveal-up delay-1" aria-roledescription="carousel">
                     <button class="slider-btn prev" aria-label="Previous slide">‹</button>
                     <div class="slider-track" role="group">
-                        <div class="slide"><img src="media/env1.jpeg" alt="Environment 1" loading="lazy" /></div>
-                        <div class="slide"><img src="media/env2.jpeg" alt="Environment 2" loading="lazy" /></div>
-                        <div class="slide"><img src="media/env4.jpeg" alt="Environment 4" loading="lazy" /></div>
-                        <div class="slide"><img src="media/comm3.jpeg" alt="Community action 3" loading="lazy" /></div>
-                        <div class="slide"><img src="media/comm4.jpeg" alt="Community action 4" loading="lazy" /></div>
-                        <div class="slide"><img src="media/comm5.jpeg" alt="Community action 5" loading="lazy" /></div>
-                        <div class="slide"><img src="media/comm6.jpeg" alt="Community action 6" loading="lazy" /></div>
-                        <div class="slide"><img src="media/comm7.jpeg" alt="Community action 7" loading="lazy" /></div>
-                        <div class="slide"><img src="media/comm9.jpeg" alt="Community action 9" loading="lazy" /></div>
-                        <div class="slide"><img src="media/empowerement.jpeg" alt="Empowerment" loading="lazy" /></div>
-                        <div class="slide"><img src="media/empower%202.jpeg" alt="Empowerment 2" loading="lazy" /></div>
-                        <div class="slide"><img src="media/pic.jpeg" alt="Community" loading="lazy" /></div>
-                        <div class="slide"><img src="media/WhatsApp%20Image%202025-09-14%20at%2009.28.32.jpeg" alt="Recent activity" loading="lazy" /></div>
+                        <div class="slide"><img src="media/gallery/pic1.jpeg" alt="Gallery image 1" loading="lazy" /></div>
+                        <div class="slide"><img src="media/gallery/pic2.jpeg" alt="Gallery image 2" loading="lazy" /></div>
+                        <div class="slide"><img src="media/gallery/pic3.jpeg" alt="Gallery image 3" loading="lazy" /></div>
+                        <div class="slide"><img src="media/gallery/pic4.jpeg" alt="Gallery image 4" loading="lazy" /></div>
+                        <div class="slide"><img src="media/gallery/pic5.jpeg" alt="Gallery image 5" loading="lazy" /></div>
+                        <div class="slide"><img src="media/gallery/pic6.jpeg" alt="Gallery image 6" loading="lazy" /></div>
+                        <div class="slide"><img src="media/gallery/pic7.jpeg" alt="Gallery image 7" loading="lazy" /></div>
+                        <div class="slide"><img src="media/gallery/pic8.jpeg" alt="Gallery image 8" loading="lazy" /></div>
+                        <div class="slide"><img src="media/gallery/pic9.jpeg" alt="Gallery image 9" loading="lazy" /></div>
+                        <div class="slide"><img src="media/gallery/pic10.jpeg" alt="Gallery image 10" loading="lazy" /></div>
                     </div>
                     <button class="slider-btn next" aria-label="Next slide">›</button>
                     <div class="slider-dots" role="tablist" aria-label="Gallery slides"></div>
@@ -395,6 +392,43 @@
             </div>
         </section>
     </main>
+
+    <!-- Donate Modal Poster -->
+    <div class="modal" id="donateModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="donateTitle">
+        <div class="modal-backdrop" data-close="modal"></div>
+        <div class="modal-dialog" role="document">
+            <button class="modal-close" aria-label="Close" data-close="modal">×</button>
+            <div class="poster">
+                <div class="mpesa-poster" aria-labelledby="donateTitle">
+                    <div class="mpesa-header">
+                        <span class="mpesa-title">LIPA NA <span>M‑PESA</span></span>
+                    </div>
+                    <div class="mpesa-body">
+                        <h3 id="donateTitle">Donate via M‑Pesa</h3>
+                        <div class="mpesa-field">
+                            <label>Paybill Number</label>
+                            <div class="digits" aria-label="Paybill digits" role="group">
+                                <span>5</span><span>2</span><span>2</span><span>5</span><span>2</span><span>2</span>
+                            </div>
+                        </div>
+                        <div class="mpesa-field">
+                            <label>Account Number</label>
+                            <div class="digits long" aria-label="Account digits" role="group">
+                                <span>7</span><span>9</span><span>4</span><span>1</span><span>3</span><span>6</span><span>7</span>
+                            </div>
+                        </div>
+                        <div class="or-sep" role="separator" aria-label="or"><span>OR</span></div>
+                        <div class="mpesa-extra">
+                            <div class="kv"><strong>Bank</strong><span>KCB</span></div>
+                            <div class="kv"><strong>Account</strong><span>133560544</span></div>
+                            <div class="kv"><strong>M‑Pesa Business No.</strong><span>522533</span></div>
+                        </div>
+                        <p class="note">Thank you for your generosity and support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="site-footer">
         <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 32px;">

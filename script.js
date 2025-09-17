@@ -118,8 +118,20 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Set year
-document.getElementById('year').textContent = new Date().getFullYear();
+// Set year (guard if element is missing)
+const yearEl = document.getElementById('year');
+if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+}
+
+// Donate Modal
+const donateBtn = document.getElementById('donateBtn');
+const donateModal = document.getElementById('donateModal');
+function openDonate(){ if(!donateModal) return; donateModal.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
+function closeDonate(){ if(!donateModal) return; donateModal.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; }
+donateBtn?.addEventListener('click', (e) => { e.preventDefault(); openDonate(); });
+donateModal?.addEventListener('click', (e) => { const t = e.target; if (t instanceof Element && t.hasAttribute('data-close')) closeDonate(); });
+window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDonate(); });
 
 // Gallery slider
 (function(){
@@ -143,13 +155,16 @@ document.getElementById('year').textContent = new Date().getFullYear();
     const continuous = true;
     let positionPx = 0;
     let lastTs = 0;
-    const pxPerMs = 0.25; // unused when continuous=false; tune for visible motion
+    const pxPerMs = 0.04; // even slower continuous scroll speed
     let isHover = false;
     let dir = 1; // 1 forward, -1 backward
 
     function slideWidth(){
         const first = track.querySelector('.slide');
-        return first ? first.clientWidth : slider.clientWidth;
+        if (!first) return slider.clientWidth;
+        const style = window.getComputedStyle(first);
+        const marginRight = parseFloat(style.marginRight) || 0;
+        return first.clientWidth + marginRight;
     }
 
     function update(animate = true) {
