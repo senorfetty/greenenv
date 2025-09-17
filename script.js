@@ -137,12 +137,48 @@ window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDonate(
 (function(){
     const slider = document.querySelector('.slider');
     if (!slider) return;
+    const isMobile = () => window.matchMedia('(max-width: 680px)').matches;
     const track = slider.querySelector('.slider-track');
     const originalSlides = Array.from(slider.querySelectorAll('.slide'));
     const prev = slider.querySelector('.prev');
     const next = slider.querySelector('.next');
     const dotsWrap = slider.querySelector('.slider-dots');
-    // Clone for seamless loop
+    // If mobile: stationary slider (no movement/controls)
+    if (isMobile()) {
+        // Eager-load gallery images on mobile to avoid dark/blank frames when navigating
+        originalSlides.forEach(sl => {
+            const img = sl.querySelector('img');
+            if (img) { img.loading = 'eager'; img.decoding = 'async'; }
+        });
+
+        let mIndex = 0;
+        function slideW(){
+            const first = track.querySelector('.slide');
+            if (!first) return slider.clientWidth;
+            const style = window.getComputedStyle(first);
+            const mr = parseFloat(style.marginRight) || 0;
+            return first.clientWidth + mr;
+        }
+        function mUpdate(animate = true){
+            const width = slideW();
+            if (!animate) track.style.transition = 'none';
+            else track.style.transition = 'transform 400ms cubic-bezier(.2,.8,.2,1)';
+            track.style.transform = `translateX(${-mIndex * width}px)`;
+            if (!animate) requestAnimationFrame(()=>{ track.style.transition = ''; });
+        }
+        function mGo(delta){
+            const max = originalSlides.length - 1;
+            mIndex = Math.max(0, Math.min(max, mIndex + delta));
+            mUpdate(true);
+        }
+        prev?.addEventListener('click', () => mGo(-1));
+        next?.addEventListener('click', () => mGo(1));
+        window.addEventListener('resize', () => mUpdate(false));
+        mUpdate(false);
+        return;
+    }
+
+    // Desktop/tablet behavior
     const firstClone = originalSlides[0].cloneNode(true);
     const lastClone = originalSlides[originalSlides.length - 1].cloneNode(true);
     track.insertBefore(lastClone, track.firstChild);
@@ -198,6 +234,13 @@ window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDonate(
 
     // Resize
     window.addEventListener('resize', () => {
+        if (isMobile()) {
+            // Switch to stationary: stop any transforms
+            stopAutoplay();
+            track.style.transition = 'none';
+            track.style.transform = 'translateX(0)';
+            return;
+        }
         if (continuous) positionPx = -index * slideWidth();
         update(false);
     });
