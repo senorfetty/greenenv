@@ -384,6 +384,13 @@ a { color: inherit; text-decoration: none; }
     transform: translateY(-4px) scale(1.08);
 }
 
+/* Ensure hero image isn't cropped on phones */
+@media (max-width: 680px) {
+    .hero-media { background: #000; }
+    .hero-img { object-fit: contain; width: 100%; height: 100%; transform: none; }
+    .hero-overlay { background: linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.35)); }
+}
+
 /* Modal */
 .modal { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; z-index: 1000; }
 .modal[aria-hidden="false"] { display: flex; }
