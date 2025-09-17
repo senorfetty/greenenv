@@ -107,8 +107,18 @@ document.querySelector('.back-to-top')?.addEventListener('click', (e) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Floating back-to-top arrow show/hide
-const floatTopBtn = document.querySelector('.floating-back-to-top');
+// Loading spinner overlay logic
+window.addEventListener('DOMContentLoaded', function() {
+  const overlay = document.getElementById('loadingOverlay');
+  if (overlay) overlay.removeAttribute('hidden');
+});
+window.addEventListener('load', function() {
+  const overlay = document.getElementById('loadingOverlay');
+  if (overlay) overlay.setAttribute('hidden', '');
+});
+
+// Floating back-to-top button logic (ensure works with new id)
+const floatTopBtn = document.getElementById('floatingBackToTop');
 window.addEventListener('scroll', () => {
     if (!floatTopBtn) return;
     if (window.scrollY > 200) {
@@ -116,6 +126,10 @@ window.addEventListener('scroll', () => {
     } else {
         floatTopBtn.classList.remove('visible');
     }
+});
+floatTopBtn?.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 // Set year (guard if element is missing)
