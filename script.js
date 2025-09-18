@@ -119,14 +119,13 @@ window.addEventListener('load', function() {
 
 // Floating back-to-top button logic (ensure works with new id)
 const floatTopBtn = document.getElementById('floatingBackToTop');
-window.addEventListener('scroll', () => {
+function updateBackToTopVisibility(){
     if (!floatTopBtn) return;
-    if (window.scrollY > 200) {
-        floatTopBtn.classList.add('visible');
-    } else {
-        floatTopBtn.classList.remove('visible');
-    }
-});
+    if (window.scrollY > 100) floatTopBtn.classList.add('visible');
+    else floatTopBtn.classList.remove('visible');
+}
+window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
+window.addEventListener('load', updateBackToTopVisibility);
 floatTopBtn?.addEventListener('click', (e) => {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -144,6 +143,10 @@ const donateModal = document.getElementById('donateModal');
 function openDonate(){ if(!donateModal) return; donateModal.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
 function closeDonate(){ if(!donateModal) return; donateModal.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; }
 donateBtn?.addEventListener('click', (e) => { e.preventDefault(); openDonate(); });
+// Allow any element with data-open="donate" to trigger the modal (e.g., footer link)
+document.querySelectorAll('[data-open="donate"]').forEach(el => {
+    el.addEventListener('click', (e) => { e.preventDefault(); openDonate(); });
+});
 donateModal?.addEventListener('click', (e) => { const t = e.target; if (t instanceof Element && t.hasAttribute('data-close')) closeDonate(); });
 window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDonate(); });
 
