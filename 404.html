@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Redirect www to non-www for GitHub Pages
+        if (window.location.hostname === 'www.greenenvironment.co.ke') {
+            window.location.href = 'https://greenenvironment.co.ke' + window.location.pathname + window.location.search;
+        }
+    </script>
+</head>
+<body>
+    <script>
+        // Fallback redirect
+        setTimeout(function() {
+            if (window.location.hostname === 'www.greenenvironment.co.ke') {
+                window.location.href = 'https://greenenvironment.co.ke' + window.location.pathname + window.location.search;
+            }
+        }, 100);
+    </script>
+    <p>Redirecting...</p>
+</body>
+</html>

@@ -1,0 +1,21 @@
+# GitHub Pages Configuration for greenenvironment.co.ke
+title: "GreenEarth | Environment Conservation"
+description: "One-page website promoting environment conservation: water, forests, clean energy, and community action."
+url: "https://greenenvironment.co.ke"
+baseurl: ""
+
+# SEO and Social Media
+author: "GreenEarth Team"
+email: "communityempowermentenvironm@gmail.com"
+
+# GitHub Pages settings
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Custom domain
+cname: greenenvironment.co.ke
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
