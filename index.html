@@ -426,20 +426,20 @@
                         <li>Machinery donation</li>
                     </ul>
                 </div>
-                <form class="contact-form reveal-up delay-1" action="#" method="post" novalidate>
+                <form class="contact-form reveal-up delay-1" id="feedbackForm" novalidate>
                     <div class="row">
                         <label>
                             <span>Name</span>
-                            <input type="text" name="name" placeholder="Enter your name" required />
+                            <input type="text" name="name" id="feedbackName" placeholder="Enter your name" required />
                         </label>
                         <label>
                             <span>Email</span>
-                            <input type="email" name="email" placeholder="Enter your email" required />
+                            <input type="email" name="email" id="feedbackEmail" placeholder="Enter your email" required />
                         </label>
                     </div>
                     <label>
                         <span>Message</span>
-                        <textarea name="message" rows="4" placeholder="How would you like to help?" required></textarea>
+                        <textarea name="message" id="feedbackMessage" rows="4" placeholder="How would you like to help?" required></textarea>
                     </label>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                     <p class="form-status" role="status" aria-live="polite"></p>

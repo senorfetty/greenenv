@@ -326,3 +326,43 @@ window.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDonate(
     if (!continuous) startAutoplay();
 })();
 
+// Feedback form - open email client
+document.getElementById('feedbackForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('feedbackName').value;
+    const email = document.getElementById('feedbackEmail').value;
+    const message = document.getElementById('feedbackMessage').value;
+    const status = document.querySelector('.form-status');
+    
+    if (!name || !email || !message) {
+        status.textContent = 'Please fill in all fields.';
+        status.style.color = '#ef4444';
+        return;
+    }
+    
+    // Create email subject and body
+    const subject = `Feedback from ${name} - Community Environmental Change`;
+    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+    
+    // Encode the email content for mailto
+    const encodedSubject = encodeURIComponent(subject);
+    const encodedBody = encodeURIComponent(body);
+    
+    // Create mailto link
+    const mailtoLink = `mailto:communityempowermentenvironm@gmail.com?subject=${encodedSubject}&body=${encodedBody}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Show success message
+    status.textContent = 'Opening your email client...';
+    status.style.color = '#16a34a';
+    
+    // Clear form after a short delay
+    setTimeout(() => {
+        document.getElementById('feedbackForm').reset();
+        status.textContent = '';
+    }, 2000);
+});
+
