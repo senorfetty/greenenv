@@ -350,7 +350,7 @@ document.getElementById('feedbackForm')?.addEventListener('submit', function(e) 
     const encodedBody = encodeURIComponent(body);
     
     // Create mailto link
-    const mailtoLink = `mailto:communityempowermentenvironm@gmail.com?subject=${encodedSubject}&body=${encodedBody}`;
+    const mailtoLink = `mailto:communityempowermentonenvironm@gmail.com?subject=${encodedSubject}&body=${encodedBody}`;
     
     // Open email client
     window.location.href = mailtoLink;
